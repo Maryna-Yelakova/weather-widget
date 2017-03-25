@@ -1,0 +1,21 @@
+{
+  "name": "weather-widget",
+  "description": "test project",
+  "main": "index.js",
+  "authors": [
+    "maryna.yelakova <maryna.yelakova@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Maryna-Yelakova/weather-widget",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3",
+    "bootstrap": "^3.3.7"
+  }
+}

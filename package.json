@@ -1,0 +1,38 @@
+{
+  "name": "weather-widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maryna-Yelakova/weather-widget.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maryna-Yelakova/weather-widget/issues"
+  },
+  "homepage": "https://github.com/Maryna-Yelakova/weather-widget#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bower": "^1.8.0",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "extend": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-live-server": "0.0.30",
+    "gulp-main-bower-files": "^1.6.1",
+    "gulp-order": "^1.1.1",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-watch": "^4.3.11",
+    "minimist": "^1.2.0",
+    "rimraf": "^2.6.1"
+  }
+}

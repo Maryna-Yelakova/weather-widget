@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html  ng-app="weather">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css" media="screen" title="no title">
+        <script src="./libs/jquery/dist/jquery.min.js"></script>
+        <script src="./libs/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./libs/angular/angular.min.js"></script>
+        <title>Weather</title>
+    </head>
+    <body>
+    <header class="container">
+         <div class="row">
+            <div class="aligner">
+                <div class="header text-left">
+                    <h1>Weather</h1>
+                </div>
+            </div>
+         </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title header">
+                        <div class="row">
+                            <div class="col-xs-6">City, Weather</div>
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-3"><span>Date</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body pull-center body day">
+                    <div class="row">
+                        <div class="col-xs-2"><i class="wi wi-rain"></i></div>
+                        <div class="col-xs-3"><span class="align-left" style="font-size:20px">temperature °C</span></div>
+                        <div class="col-xs-3"><span style="font-size:20px">time AM/PM</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2"><span class="align-left" style="font-size:9px">coordinate</span></div>
+                        <div class="col-xs-3"><span class="align-left" style="font-size:9px">precip %</span></div>
+                        <div class="col-xs-3"><span class="align-left" style="font-size:9px">humidity %</span></div>
+                        <div class="col-xs-3"><span class="align-left" style="font-size:9px">wind  mph</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container footer text-center">
+    (C)Maryna-Yelakova
+    </footer>
+    <script src="./all.js"></script>
+    </body>
+</html>
