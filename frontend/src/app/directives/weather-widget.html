@@ -11,9 +11,10 @@
         </div>
         <div class="panel-body pull-center body day">
             <div ng-cloack class="row">
-                <div class="col-xs-2"><i class="wi wi-rain">{{weather.description}}</i></div>
+                <!--<div class="col-xs-2"><i class="wi wi-rain">{{weather.description}}</i></div>-->
+                <div class="col-xs-2"><img ng-src="http://openweathermap.org/img/w/{{weather.icon}}.png"></div>
                 <div class="col-xs-3"><span class="align-left" style="font-size:20px">{{weather.temp.current}} °C</span></div>
-                <div class="col-xs-3"><span style="font-size:20px">{{weather.date | date:'h:mm'}}</span></div>
+                <div class="col-xs-3"><span style="font-size:20px">{{weather.date | date:'hh:mm a'}}</span></div>
             </div>
             <div ng-cloack class="row">
                 <div class="col-xs-2"><span class="align-left" style="font-size:9px">{{weather.coord.lat}}/{{weather.coord.lon}}</span></div>
