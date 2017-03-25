@@ -1,4 +1,4 @@
 (function() {
-    angular.module('weather', [])
+    angular.module("weather", []);
 })();
 

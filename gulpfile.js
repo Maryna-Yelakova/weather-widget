@@ -2,8 +2,8 @@
 
 var gulp = require('gulp'),
     rimraf = require('rimraf'),
-    order = require("gulp-order"),
     concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
     mainBowerFiles = require('gulp-main-bower-files'),
     gls = require('gulp-live-server'),
     runSequence = require('gulp-run-sequence'),
@@ -14,9 +14,9 @@ var gulp = require('gulp'),
 var path = {
     build: {
         jsorder: [
-            'frontend/src/app.js',
-            'frontend/src/app/services/*.js',
-            'frontend/src/app/controllers/*.js'
+            'frontend/src/app/app.js',
+            'frontend/src/app/services/weather-widget-service.js',
+            'frontend/src/app/controllers/weather-widget-controller.js'
         ]
     },
     libs:{
@@ -35,7 +35,12 @@ var path = {
     src: {
         js: 'frontend/src/app/**/*.js',
         bower:'bower.json',
-        indexhtml: 'frontend/src/app/index.html'
+        indexhtml: 'frontend/src/app/index.html',
+        concatJS: [
+            'frontend/src/app/app.js',
+            'frontend/src/app/services/weather-widget-service.js',
+            'frontend/src/app/controllers/weather-widget-controller.js'
+        ]
     },
     watch: {
         js: 'frontend/src/app/**/*.js',
@@ -64,8 +69,8 @@ gulp.task('clean', function (cb) {
     rimraf(path.dst.main + '/*', cb);
 });
 gulp.task('build:js', function(){
-    gulp.src(path.src.js)
-        .pipe(order(path.build.jsorder))
+    gulp.src(path.src.concatJS)
+        .pipe(uglify())
         .pipe(concat('all.js'))
         .pipe(gulp.dest(path.dst.main))
 });
