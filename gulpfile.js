@@ -16,7 +16,8 @@ var path = {
         jsorder: [
             'frontend/src/app/app.js',
             'frontend/src/app/services/weather-widget-service.js',
-            'frontend/src/app/controllers/weather-widget-controller.js'
+            'frontend/src/app/controllers/weather-widget-controller.js',
+            'frontend/src/app/directives/weather-widget.js'
         ]
     },
     libs:{
@@ -35,16 +36,19 @@ var path = {
     src: {
         js: 'frontend/src/app/**/*.js',
         bower:'bower.json',
+        html: 'frontend/src/app/directives/*.html',
         indexhtml: 'frontend/src/app/index.html',
         concatJS: [
             'frontend/src/app/app.js',
             'frontend/src/app/services/weather-widget-service.js',
-            'frontend/src/app/controllers/weather-widget-controller.js'
+            'frontend/src/app/controllers/weather-widget-controller.js',
+            'frontend/src/app/directives/weather-widget.js'
         ]
     },
     watch: {
         js: 'frontend/src/app/**/*.js',
         bower:'bower.json',
+        html: 'frontend/src/app/directives/*.html',
         indexhtml: 'frontend/src/app/index.html'
     },
     dst:{
@@ -80,6 +84,8 @@ gulp.task('copy:libs', function() {
         .pipe(gulp.dest(path.dst.libs))
 });
 gulp.task('copy:html', function(){
+    gulp.src(path.src.html)
+        .pipe(gulp.dest(path.dst.main));
     gulp.src(path.src.indexhtml)
         .pipe(gulp.dest(path.dst.main));
 });

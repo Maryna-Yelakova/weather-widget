@@ -19,32 +19,7 @@
          </div>
     </header>
     <main>
-        <div class="container" ng-controller="weather.weatherCtrl">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-title header">
-                        <div class="row">
-                            <div class="col-xs-6">{{weather.city}}, Weather</div>
-                            <div class="col-xs-2"></div>
-                            <div class="col-xs-3"><span>{{weather.date | date:'EEE M/d'}}</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-body pull-center body day">
-                    <div class="row">
-                        <div class="col-xs-2"><i class="wi wi-rain">{{weather.description}}</i></div>
-                        <div class="col-xs-3"><span class="align-left" style="font-size:20px">{{weather.temp.current}} °C</span></div>
-                        <div class="col-xs-3"><span style="font-size:20px">{{weather.date | date:'h:mm'}}</span></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-2"><span class="align-left" style="font-size:9px">{{weather.coord.lat}}/{{weather.coord.lon}}</span></div>
-                        <div class="col-xs-3"><span class="align-left" style="font-size:9px"> Clouds {{weather.clouds}}</span></div>
-                        <div class="col-xs-3"><span class="align-left" style="font-size:9px"> Humidity {{weather.humidity}} %</span></div>
-                        <div class="col-xs-3"><span class="align-left" style="font-size:9px"> Wind {{weather.wind}}  mph</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <weather-widget></weather-widget>
     </main>
     <footer class="container footer text-center">
     (C)Maryna-Yelakova
