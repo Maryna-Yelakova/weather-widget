@@ -30,6 +30,9 @@ var path = {
             },
             bootstrap: {
                 main: 'dist/**/*.*'
+            },
+            "angular-websocket":{
+                main: 'dist/angular-websocket.js'
             }
         }
     },
